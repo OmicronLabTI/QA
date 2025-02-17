@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.2 on win32)" generated="2025-02-17T12:48:39.676875" rpa="false" schemaversion="5">
+<suite id="s1" name="Testing" source="c:\Users\RicardoValadez\OneDrive - OMICRONLAB SA DE CV\Escritorio\QA\testing.robot">
+<test id="s1-t1" name="Open Google And Search" line="11">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-17T12:48:41.751111" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com.mx/'.</msg>
+<arg>${GOOGLE}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-17T12:48:41.739132" elapsed="9.525950"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-17T12:48:51.281021" elapsed="0.281679"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-17T12:48:51.594825" level="INFO">Typing text 'Robot Framework' into text field 'name=q'.</msg>
+<arg>name=q</arg>
+<arg>Robot Framework</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-17T12:48:51.591096" elapsed="0.995206"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-02-17T12:48:52.609758" level="INFO">Sending key(s) ('RETURN',) to name=q element.</msg>
+<msg time="2025-02-17T12:48:53.208906" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2025-02-17T12:48:53.210843" level="INFO">Releasing special key RETURN.</msg>
+<arg>name=q</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-02-17T12:48:52.604747" elapsed="3.401472"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-17T12:48:58.043323" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-17T12:48:56.040012" elapsed="2.004711"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-02-17T12:48:58.322441" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="google.png"&gt;&lt;img src="google.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUTDIR}/google.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-02-17T12:48:58.055726" elapsed="0.268067"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-17T12:48:58.332599" elapsed="3.314945"/>
+</kw>
+<status status="PASS" start="2025-02-17T12:48:41.661959" elapsed="19.989666"/>
+</test>
+<test id="s1-t2" name="Login And First Page" line="20">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-17T12:49:01.667559" level="INFO">Opening browser 'chrome' to base url 'https://cliente-ashen.vercel.app/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-17T12:49:01.664078" elapsed="8.572074"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-17T12:49:10.244382" elapsed="1.431395"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-02-17T12:49:13.028735" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="login.png"&gt;&lt;img src="login.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUTDIR}/login.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-02-17T12:49:11.679824" elapsed="1.351609"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-17T12:49:13.069636" level="INFO">Typing text 'r.valadez@o-lab.mx' into text field 'id=login_email'.</msg>
+<arg>id=login_email</arg>
+<arg>${USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-17T12:49:13.063409" elapsed="4.631322"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-02-17T12:49:17.709639" level="INFO">Typing password into text field 'id=login_password'.</msg>
+<msg time="2025-02-17T12:49:18.040537" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=login_password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-17T12:49:17.706336" elapsed="0.725377"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-17T12:49:18.453819" level="INFO">Clicking button 'id=login_submit'.</msg>
+<arg>id=login_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-17T12:49:18.451437" elapsed="0.547233"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-17T12:49:24.021171" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-17T12:49:19.011034" elapsed="5.012101"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-02-17T12:49:25.070576" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pantallainicial.png"&gt;&lt;img src="pantallainicial.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUTDIR}/pantallainicial.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-02-17T12:49:24.049489" elapsed="1.022674"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-17T12:49:25.118334" elapsed="6.761501"/>
+</kw>
+<status status="PASS" start="2025-02-17T12:49:01.659016" elapsed="30.225127"/>
+</test>
+<status status="PASS" start="2025-02-17T12:48:39.717513" elapsed="52.177135"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Testing" id="s1" pass="2" fail="0" skip="0">Testing</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
